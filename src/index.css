@@ -1,0 +1,83 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 15%;
+    --primary: 207 90% 54%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 207 90% 65%;
+    --primary-dark: 207 90% 45%;
+    --secondary: 210 17% 95%;
+    --secondary-foreground: 210 11% 15%;
+    --muted: 210 17% 95%;
+    --muted-foreground: 210 11% 46%;
+    --accent: 207 90% 94%;
+    --accent-foreground: 207 90% 54%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 17% 90%;
+    --input: 210 17% 90%;
+    --ring: 207 90% 54%;
+    --chart-1: 207 90% 54%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --shadow-elegant: 207 90% 54% / 0.1;
+    --shadow-glow: 207 90% 65% / 0.2;
+  }
+
+  .dark {
+    --background: 210 11% 7%;
+    --foreground: 0 0% 98%;
+    --card: 210 11% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 210 11% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 207 90% 54%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 207 90% 65%;
+    --primary-dark: 207 90% 45%;
+    --secondary: 210 11% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 210 11% 15%;
+    --muted-foreground: 210 11% 65%;
+    --accent: 210 11% 15%;
+    --accent-foreground: 207 90% 54%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 11% 20%;
+    --input: 210 11% 20%;
+    --ring: 207 90% 54%;
+    --chart-1: 207 90% 54%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --shadow-elegant: 207 90% 54% / 0.2;
+    --shadow-glow: 207 90% 65% / 0.3;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
