@@ -58,7 +58,7 @@ export default async function handler(req: any, res: any) {
         },
         parameter: {
           chat: {
-            domain: 'generalv3.5',
+            domain: 'general',
             temperature: 0.8,
             max_tokens: 2048
           }
