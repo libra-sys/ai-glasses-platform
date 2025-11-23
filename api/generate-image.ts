@@ -56,11 +56,12 @@ export default async function handler(req: any, res: any) {
     }
 
     const data = await response.json();
+    console.log('Aliyun Response:', JSON.stringify(data, null, 2));
     
     if (data.output?.task_status === 'PENDING' || data.output?.task_status === 'RUNNING') {
       const taskId = data.output.task_id;
       
-      await new Promise(resolve => setTimeout(resolve, 3000));
+      await new Promise(resolve => setTimeout(resolve, 5000));
       
       const resultResponse = await fetch(`${ALIYUN_CONFIG.apiUrl}/${taskId}`, {
         method: 'GET',
@@ -70,8 +71,9 @@ export default async function handler(req: any, res: any) {
       });
       
       const resultData = await resultResponse.json();
+      console.log('Aliyun Task Result:', JSON.stringify(resultData, null, 2));
       
-      if (resultData.output?.task_status === 'SUCCEEDED') {
+      if (resultData.output?.task_status === 'SUCCEEDED' && resultData.output?.results?.[0]?.url) {
         const imageUrl = resultData.output.results[0].url;
         return res.status(200).json({ 
           imageUrl,
@@ -87,10 +89,11 @@ export default async function handler(req: any, res: any) {
       });
     }
 
-    const imageUrl = `https://via.placeholder.com/512x512/6366f1/ffffff?text=${encodeURIComponent('生成中')}`;
+    console.error('No image URL in response:', data);
+    const imageUrl = `https://via.placeholder.com/512x512/6366f1/ffffff?text=${encodeURIComponent('生成失败')}`;
     return res.status(200).json({ 
       imageUrl,
-      message: '图片生成中，请稍后重试'
+      message: '图片生成失败：' + (data.message || '未知错误')
     });
   } catch (error: any) {
     console.error('Image generation error:', error);
