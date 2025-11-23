@@ -379,13 +379,13 @@ export const storageApi = {
     const fileName = `${userId}/${Date.now()}.${fileExt}`;
     
     const { data, error } = await supabase.storage
-      .from('app-7pdiv8w9evi9_component_files')
+      .from('component-files')
       .upload(fileName, file);
     
     if (error) throw error;
     
     const { data: { publicUrl } } = supabase.storage
-      .from('app-7pdiv8w9evi9_component_files')
+      .from('component-files')
       .getPublicUrl(data.path);
     
     return publicUrl;
@@ -396,13 +396,13 @@ export const storageApi = {
     const fileName = `${userId}/${Date.now()}.${fileExt}`;
     
     const { data, error } = await supabase.storage
-      .from('app-7pdiv8w9evi9_component_images')
+      .from('component-images')
       .upload(fileName, file);
     
     if (error) throw error;
     
     const { data: { publicUrl } } = supabase.storage
-      .from('app-7pdiv8w9evi9_component_images')
+      .from('component-images')
       .getPublicUrl(data.path);
     
     return publicUrl;

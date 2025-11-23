@@ -37,6 +37,7 @@
     "@radix-ui/react-toggle-group": "^1.1.11",
     "@radix-ui/react-tooltip": "^1.2.8",
     "@supabase/supabase-js": "^2.76.1",
+    "@vercel/node": "^3.0.0",
     "axios": "^1.13.1",
     "browser-image-compression": "^2.0.2",
     "class-variance-authority": "^0.7.1",
@@ -66,6 +67,7 @@
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^1.1.2",
     "video-react": "^0.16.0",
+    "ws": "^8.18.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
@@ -75,6 +77,7 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@types/video-react": "^0.15.8",
+    "@types/ws": "^8.5.10",
     "@typescript/native-preview": "7.0.0-dev.20251103.1",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
