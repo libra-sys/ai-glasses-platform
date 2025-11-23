@@ -1,29 +1,7 @@
-import crypto from 'crypto';
-
-const SPARK_CONFIG = {
-  appId: '6595110b',
-  apiSecret: 'YzAyMDZjYmNkNjZiNTBhNTc3OWE0M2Ew',
-  apiKey: '3973edddd07ca05aab5b96c64cd20a52',
-  imageUrl: 'https://spark-api.cn-huabei-1.xf-yun.com/v2.1/tti'
+const ALIYUN_CONFIG = {
+  apiKey: 'sk-e8449026027e4526b12ab3d19ae7b8db',
+  apiUrl: 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis'
 };
-
-function getAuthUrl(): string {
-  const date = new Date().toUTCString();
-  const host = 'spark-api.cn-huabei-1.xf-yun.com';
-  const path = '/v2.1/tti';
-  
-  const signatureOrigin = `host: ${host}\ndate: ${date}\nPOST ${path} HTTP/1.1`;
-  
-  const signature = crypto
-    .createHmac('sha256', SPARK_CONFIG.apiSecret)
-    .update(signatureOrigin)
-    .digest('base64');
-  
-  const authorizationOrigin = `api_key="${SPARK_CONFIG.apiKey}", algorithm="hmac-sha256", headers="host date request-line", signature="${signature}"`;
-  const authorization = Buffer.from(authorizationOrigin).toString('base64');
-  
-  return `${SPARK_CONFIG.imageUrl}?authorization=${authorization}&date=${encodeURIComponent(date)}&host=${host}`;
-}
 
 export default async function handler(req: any, res: any) {
   const { method } = req;
@@ -47,41 +25,28 @@ export default async function handler(req: any, res: any) {
       return res.status(400).json({ error: '请提供图片描述' });
     }
 
-    const authUrl = getAuthUrl();
-
-    const response = await fetch(authUrl, {
+    const response = await fetch(ALIYUN_CONFIG.apiUrl, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${ALIYUN_CONFIG.apiKey}`,
+        'X-DashScope-Async': 'enable'
       },
       body: JSON.stringify({
-        header: {
-          app_id: SPARK_CONFIG.appId,
-          uid: 'user_' + Date.now()
+        model: 'wanx-v1',
+        input: {
+          prompt: prompt
         },
-        parameter: {
-          chat: {
-            domain: 'general',
-            width: 512,
-            height: 512
-          }
-        },
-        payload: {
-          message: {
-            text: [
-              {
-                role: 'user',
-                content: prompt
-              }
-            ]
-          }
+        parameters: {
+          size: '512*512',
+          n: 1
         }
       })
     });
 
     if (!response.ok) {
       const error = await response.text();
-      console.error('Image API Error:', error);
+      console.error('Aliyun API Error:', error);
       
       const imageUrl = `https://via.placeholder.com/512x512/6366f1/ffffff?text=${encodeURIComponent('AI图片生成')}`;
       return res.status(200).json({ 
@@ -92,27 +57,40 @@ export default async function handler(req: any, res: any) {
 
     const data = await response.json();
     
-    if (data.header?.code !== 0) {
-      console.error('Image API Response Error:', data);
-      const imageUrl = `https://via.placeholder.com/512x512/6366f1/ffffff?text=${encodeURIComponent('生成失败')}`;
+    if (data.output?.task_status === 'PENDING' || data.output?.task_status === 'RUNNING') {
+      const taskId = data.output.task_id;
+      
+      await new Promise(resolve => setTimeout(resolve, 3000));
+      
+      const resultResponse = await fetch(`${ALIYUN_CONFIG.apiUrl}/${taskId}`, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${ALIYUN_CONFIG.apiKey}`
+        }
+      });
+      
+      const resultData = await resultResponse.json();
+      
+      if (resultData.output?.task_status === 'SUCCEEDED') {
+        const imageUrl = resultData.output.results[0].url;
+        return res.status(200).json({ 
+          imageUrl,
+          message: '图片生成成功'
+        });
+      }
+    }
+    
+    if (data.output?.results?.[0]?.url) {
       return res.status(200).json({ 
-        imageUrl,
-        message: data.header?.message || '图片生成失败'
+        imageUrl: data.output.results[0].url,
+        message: '图片生成成功'
       });
     }
 
-    const imageData = data.payload?.choices?.text?.[0]?.content;
-    if (!imageData) {
-      const imageUrl = `https://via.placeholder.com/512x512/6366f1/ffffff?text=${encodeURIComponent('无数据')}`;
-      return res.status(200).json({ 
-        imageUrl,
-        message: '未能获取生成的图片'
-      });
-    }
-
+    const imageUrl = `https://via.placeholder.com/512x512/6366f1/ffffff?text=${encodeURIComponent('生成中')}`;
     return res.status(200).json({ 
-      imageUrl: `data:image/png;base64,${imageData}`,
-      message: '图片生成成功'
+      imageUrl,
+      message: '图片生成中，请稍后重试'
     });
   } catch (error: any) {
     console.error('Image generation error:', error);
