@@ -6,6 +6,7 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
+    "start": "node server.js",
     "lint": "tsgo -p tsconfig.check.json; npx biome lint; .rules/check.sh;npx tailwindcss -i ./src/index.css -o /dev/null 2>&1 | grep -E '^(CssSyntaxError|Error):.*' || true;vite build --minify false --logLevel error --outDir /tmp/outdir"
   },
   "dependencies": {
@@ -46,6 +47,7 @@
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.6.0",
     "eventsource-parser": "^3.0.6",
+    "express": "^4.18.2",
     "input-otp": "^1.4.2",
     "ky": "^1.13.0",
     "lucide-react": "^0.553.0",
