@@ -208,49 +208,25 @@ export async function generateComponentDescription(componentName: string, featur
 // 生成组件封面图
 export async function generateComponentImage(prompt: string): Promise<string> {
   try {
-    const response = await fetch(SPARK_CONFIG.ttiUrl, {
+    const response = await fetch('/api/generate-image', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        header: {
-          app_id: SPARK_CONFIG.appId,
-          uid: 'user_' + Date.now()
-        },
-        parameter: {
-          chat: {
-            domain: 'general',
-            width: 512,
-            height: 512
-          }
-        },
-        payload: {
-          message: {
-            text: [
-              {
-                role: 'user',
-                content: prompt
-              }
-            ]
-          }
-        }
-      })
+      body: JSON.stringify({ prompt })
     });
 
     if (!response.ok) {
-      throw new Error(`图片生成失败: ${response.status}`);
+      throw new Error('图片生成失败');
     }
 
     const data = await response.json();
     
-    // 从响应中提取图片 URL 或 base64
-    const imageData = data.payload?.choices?.[0]?.message?.content?.text;
-    if (!imageData) {
+    if (!data.imageUrl) {
       throw new Error('未能获取生成的图片');
     }
 
-    return imageData;
+    return data.imageUrl;
   } catch (error) {
     console.error('图片生成错误:', error);
     throw error;

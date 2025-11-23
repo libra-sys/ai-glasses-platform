@@ -45,3 +45,4 @@ temp
 .vercel
 
 .vercel
+.env*.local
