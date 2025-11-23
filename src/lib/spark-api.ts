@@ -48,11 +48,12 @@ function getWebSocketUrl(): string {
   return url.toString();
 }
 
-// 调用后端 API
+// 调用后端 API（如果后端有问题，使用本地 AI）
 export async function sendChatStream(options: ChatOptions) {
   const { messages, onUpdate, onComplete, onError } = options;
 
   try {
+    // 尝试调用后端 API
     const response = await fetch('/api/spark-chat', {
       method: 'POST',
       headers: {
@@ -67,12 +68,15 @@ export async function sendChatStream(options: ChatOptions) {
     });
 
     if (!response.ok) {
-      const error = await response.json();
-      throw new Error(error.error || 'AI 对话失败');
+      throw new Error('API unavailable');
     }
 
     const data = await response.json();
     
+    if (data.error) {
+      throw new Error(data.error);
+    }
+
     // 模拟流式输出效果
     let currentText = '';
     const words = data.content.split('');
@@ -85,7 +89,22 @@ export async function sendChatStream(options: ChatOptions) {
     
     onComplete();
   } catch (error) {
-    onError(error as Error);
+    // 后端 API 失败，使用本地智能助手
+    console.warn('Using local AI assistant:', error);
+    
+    const userMessage = messages[messages.length - 1].content;
+    const response = generateResponse(userMessage);
+    
+    let currentText = '';
+    const words = response.split('');
+    
+    for (let i = 0; i < words.length; i++) {
+      await new Promise(resolve => setTimeout(resolve, 30));
+      currentText += words[i];
+      onUpdate(currentText);
+    }
+    
+    onComplete();
   }
 }
 

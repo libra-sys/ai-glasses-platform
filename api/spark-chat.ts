@@ -6,7 +6,7 @@ const SPARK_CONFIG = {
   appId: '6595110b',
   apiSecret: 'YzAyMDZjYmNkNjZiNTBhNTc3OWE0M2Ew',
   apiKey: '3973edddd07ca05aab5b96c64cd20a52',
-  wsUrl: 'wss://spark-api.xf-yun.com/v1.1/chat'
+  wsUrl: 'wss://spark-api.xf-yun.com/chat/max-32k'
 };
 
 // 生成鉴权 URL
@@ -58,7 +58,7 @@ export default async function handler(req: any, res: any) {
         },
         parameter: {
           chat: {
-            domain: 'general',
+            domain: 'max-32k',
             temperature: 0.8,
             max_tokens: 2048
           }
