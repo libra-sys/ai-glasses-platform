@@ -109,9 +109,9 @@ export default function Home() {
                         查看平台使用说明，了解如何注册、发布组件、使用AI工具等功能
                       </p>
                       <Button asChild variant="outline" className="w-full">
-                        <a href="/USAGE_GUIDE.md" target="_blank" rel="noopener noreferrer">
+                        <Link to="/dev-doc">
                           查看使用指南
-                        </a>
+                        </Link>
                       </Button>
                     </div>
                     
