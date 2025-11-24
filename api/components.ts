@@ -25,7 +25,7 @@ export default async function handler(req: any, res: any) {
           *,
           author:profiles(username, avatar_url)
         `)
-        .eq('status', 'published')
+        .eq('status', 'approved')
         .order('created_at', { ascending: false });
 
       if (keyword) {
