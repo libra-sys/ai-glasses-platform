@@ -19,6 +19,7 @@ import componentDownloadHandler from './api/components/[id]/download.js';
 import generateImageHandler from './api/generate-image.js';
 import translateHandler from './api/translate.js';
 import userComponentsHandler from './api/user-components.js';
+import miniappAuthHandler from './api/miniapp-auth.js';
 
 app.post('/api/spark-chat', async (req, res) => {
   try {
@@ -87,6 +88,15 @@ app.post('/api/user-components', async (req, res) => {
 app.delete('/api/user-components', async (req, res) => {
   try {
     await userComponentsHandler(req, res);
+  } catch (error) {
+    console.error('API Error:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.post('/api/miniapp-auth', async (req, res) => {
+  try {
+    await miniappAuthHandler(req, res);
   } catch (error) {
     console.error('API Error:', error);
     res.status(500).json({ error: error.message });
