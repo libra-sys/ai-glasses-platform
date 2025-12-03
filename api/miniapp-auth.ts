@@ -20,7 +20,51 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const { action, email, password } = req.body;
+    const { action, email, password, weixinOpenid } = req.body;
+
+    if (action === 'wechat-login') {
+      if (!weixinOpenid) {
+        return res.status(400).json({ error: 'weixinOpenid is required' });
+      }
+
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('user_id')
+        .eq('weixin_openid', weixinOpenid)
+        .single();
+
+      if (profile) {
+        return res.status(200).json({
+          success: true,
+          userId: profile.user_id,
+          isBound: true
+        });
+      }
+
+      const randomEmail = `wx_${weixinOpenid.substring(0, 16)}@miniapp.local`;
+      const randomPassword = weixinOpenid.substring(0, 20);
+
+      const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
+        email: randomEmail,
+        password: randomPassword
+      });
+
+      if (signUpError) throw signUpError;
+
+      if (signUpData.user) {
+        await supabase
+          .from('profiles')
+          .update({ weixin_openid: weixinOpenid })
+          .eq('id', signUpData.user.id);
+      }
+
+      return res.status(200).json({
+        success: true,
+        userId: signUpData.user?.id,
+        isBound: false,
+        autoCreated: true
+      });
+    }
 
     if (action === 'register') {
       const { data, error } = await supabase.auth.signUp({
