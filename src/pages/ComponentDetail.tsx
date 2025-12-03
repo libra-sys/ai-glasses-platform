@@ -84,9 +84,19 @@ export default function ComponentDetail() {
     }
 
     try {
+      const response = await fetch(component.file_url);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${component.name}.ino`;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+      
       await componentsApi.incrementDownloadCount(id!);
-      window.open(component.file_url, '_blank');
-      toast.success('开始下载');
+      toast.success('下载成功');
       loadComponent();
     } catch (error: any) {
       toast.error('下载失败');
