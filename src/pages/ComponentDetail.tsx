@@ -19,6 +19,7 @@ export default function ComponentDetail() {
   const [component, setComponent] = useState<ComponentWithAuthor | null>(null);
   const [comments, setComments] = useState<CommentWithUser[]>([]);
   const [isFavorite, setIsFavorite] = useState(false);
+  const [isInstalled, setIsInstalled] = useState(false);
   const [loading, setLoading] = useState(true);
   const [commentContent, setCommentContent] = useState('');
   const [rating, setRating] = useState<number>(5);
@@ -30,6 +31,7 @@ export default function ComponentDetail() {
       loadComments();
       if (user) {
         checkFavorite();
+        checkInstalled();
       }
     }
   }, [id, user]);
@@ -64,6 +66,17 @@ export default function ComponentDetail() {
     }
   };
 
+  const checkInstalled = async () => {
+    try {
+      const response = await fetch(`/api/user-components?userId=${user!.id}`);
+      const data = await response.json();
+      const installed = data.components?.some((c: any) => c.id === id);
+      setIsInstalled(installed);
+    } catch (error) {
+      console.error('检查安装状态失败:', error);
+    }
+  };
+
   const handleDownload = async () => {
     if (!component?.file_url) {
       toast.error('组件文件不存在');
@@ -77,6 +90,58 @@ export default function ComponentDetail() {
       loadComponent();
     } catch (error: any) {
       toast.error('下载失败');
+    }
+  };
+
+  const handleInstall = async () => {
+    if (!user) {
+      toast.error('请先登录');
+      navigate('/login');
+      return;
+    }
+
+    try {
+      const response = await fetch(`/api/user-components?userId=${user.id}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          componentId: id
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('安装失败');
+      }
+
+      setIsInstalled(true);
+      toast.success('已安装到我的眼镜，请在小程序中查看');
+      
+      // 增加下载计数
+      await componentsApi.incrementDownloadCount(id!);
+      loadComponent();
+    } catch (error: any) {
+      toast.error(error.message || '安装失败');
+    }
+  };
+
+  const handleUninstall = async () => {
+    if (!user) return;
+
+    try {
+      const response = await fetch(`/api/user-components?userId=${user.id}&componentId=${id}`, {
+        method: 'DELETE'
+      });
+
+      if (!response.ok) {
+        throw new Error('卸载失败');
+      }
+
+      setIsInstalled(false);
+      toast.success('已从我的眼镜中移除');
+    } catch (error: any) {
+      toast.error(error.message || '卸载失败');
     }
   };
 
@@ -269,9 +334,20 @@ export default function ComponentDetail() {
                 <CardTitle>操作</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <Button className="w-full" onClick={handleDownload}>
+                {isInstalled ? (
+                  <Button variant="destructive" className="w-full" onClick={handleUninstall}>
+                    <Package className="h-4 w-4 mr-2" />
+                    从我的眼镜移除
+                  </Button>
+                ) : (
+                  <Button className="w-full" onClick={handleInstall}>
+                    <Package className="h-4 w-4 mr-2" />
+                    安装到我的眼镜
+                  </Button>
+                )}
+                <Button variant="outline" className="w-full" onClick={handleDownload}>
                   <Download className="h-4 w-4 mr-2" />
-                  下载组件
+                  下载组件文件
                 </Button>
                 <Button variant="outline" className="w-full" onClick={handleFavorite}>
                   <Heart className={`h-4 w-4 mr-2 ${isFavorite ? 'fill-primary text-primary' : ''}`} />

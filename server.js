@@ -18,6 +18,7 @@ import componentsHandler from './api/components.js';
 import componentDownloadHandler from './api/components/[id]/download.js';
 import generateImageHandler from './api/generate-image.js';
 import translateHandler from './api/translate.js';
+import userComponentsHandler from './api/user-components.js';
 
 app.post('/api/spark-chat', async (req, res) => {
   try {
@@ -59,6 +60,33 @@ app.post('/api/generate-image', async (req, res) => {
 app.post('/api/translate', async (req, res) => {
   try {
     await translateHandler(req, res);
+  } catch (error) {
+    console.error('API Error:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.get('/api/user-components', async (req, res) => {
+  try {
+    await userComponentsHandler(req, res);
+  } catch (error) {
+    console.error('API Error:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.post('/api/user-components', async (req, res) => {
+  try {
+    await userComponentsHandler(req, res);
+  } catch (error) {
+    console.error('API Error:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.delete('/api/user-components', async (req, res) => {
+  try {
+    await userComponentsHandler(req, res);
   } catch (error) {
     console.error('API Error:', error);
     res.status(500).json({ error: error.message });

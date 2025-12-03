@@ -9,6 +9,7 @@ import Admin from './pages/Admin';
 import Login from './pages/Login';
 import DevDoc from './pages/DevDoc';
 import Translator from './pages/Translator';
+import TimeDisplay from './pages/TimeDisplay';
 
 export interface RouteConfig {
   name: string;
@@ -61,6 +62,11 @@ const routes: RouteConfig[] = [
     name: '实时翻译',
     path: '/translator',
     element: <Translator />
+  },
+  {
+    name: '时间显示',
+    path: '/time-display',
+    element: <TimeDisplay />
   },
   {
     name: '管理后台',
