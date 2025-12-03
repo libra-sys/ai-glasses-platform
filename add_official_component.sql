@@ -75,7 +75,7 @@ INSERT INTO components (
   NOW()
 );
 
--- 4. 实时翻译组件
+-- 4. 实时翻译组件（实际可用）
 INSERT INTO components (
   name,
   description,
@@ -89,14 +89,14 @@ INSERT INTO components (
   created_at
 ) VALUES (
   '实时翻译',
-  '支持中英日韩等多语言即时翻译，语音识别准确率高达98%，让跨语言交流无障碍',
+  '使用阿里云API实现多语言即时翻译，支持中英日韩等8种语言互译。可通过蓝牙配置源语言和目标语言，实时显示原文和译文。',
   'translation',
   '1.0.0',
   'approved',
   (SELECT id FROM auth.users WHERE email = 'user1@aiglasses.local'),
   0,
   'https://via.placeholder.com/512x512/9B59B6/ffffff?text=翻译',
-  'https://example.com/components/translator.zip',
+  'https://raw.githubusercontent.com/libra-sys/ai-glasses-platform/main/components/realtime-translator/realtime_translator.ino',
   NOW()
 );
 
