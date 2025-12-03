@@ -1,6 +1,6 @@
 -- 添加官方推荐组件示例
 
--- 1. 时间显示组件
+-- 1. 时间显示组件（实际可用）
 INSERT INTO components (
   name,
   description,
@@ -14,14 +14,14 @@ INSERT INTO components (
   created_at
 ) VALUES (
   '时间显示',
-  '在眼镜屏幕上显示当前时间，支持多种时间格式，包括12/24小时制，可自定义更新频率和显示样式',
+  '在眼镜屏幕上显示当前时间，支持多种时间格式，包括12/24小时制，可自定义更新频率和显示样式。使用NTP自动同步时间，低功耗设计适合长时间使用。',
   'productivity',
   '1.0.0',
   'approved',
   (SELECT id FROM auth.users WHERE email = 'user1@aiglasses.local'),
   0,
-  'https://via.placeholder.com/512x512/4A90E2/ffffff?text=时钟',
-  'https://example.com/components/time-display.zip',
+  'https://via.placeholder.com/512x512/4A90E2/ffffff?text=%E6%97%B6%E9%92%9F',
+  'https://raw.githubusercontent.com/AI-FanGe/OpenAIglasses_for_Navigation/main/components/time-display.ino',
   NOW()
 );
 
