@@ -17,6 +17,7 @@ import sparkChatHandler from './api/spark-chat.js';
 import componentsHandler from './api/components.js';
 import componentDownloadHandler from './api/components/[id]/download.js';
 import generateImageHandler from './api/generate-image.js';
+import translateHandler from './api/translate.js';
 
 app.post('/api/spark-chat', async (req, res) => {
   try {
@@ -49,6 +50,15 @@ app.get('/api/components/:id/download', async (req, res) => {
 app.post('/api/generate-image', async (req, res) => {
   try {
     await generateImageHandler(req, res);
+  } catch (error) {
+    console.error('API Error:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.post('/api/translate', async (req, res) => {
+  try {
+    await translateHandler(req, res);
   } catch (error) {
     console.error('API Error:', error);
     res.status(500).json({ error: error.message });

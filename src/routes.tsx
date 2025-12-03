@@ -8,6 +8,7 @@ import AITools from './pages/AITools';
 import Admin from './pages/Admin';
 import Login from './pages/Login';
 import DevDoc from './pages/DevDoc';
+import Translator from './pages/Translator';
 
 export interface RouteConfig {
   name: string;
@@ -55,6 +56,11 @@ const routes: RouteConfig[] = [
     name: '开发文档',
     path: '/dev-doc',
     element: <DevDoc />
+  },
+  {
+    name: '实时翻译',
+    path: '/translator',
+    element: <Translator />
   },
   {
     name: '管理后台',
