@@ -69,8 +69,8 @@ export default function ComponentDetail() {
   const checkInstalled = async () => {
     try {
       const response = await fetch(`/api/user-components?userId=${user!.id}`);
-      const data = await response.json();
-      const installed = data.components?.some((c: any) => c.id === id);
+      const result = await response.json();
+      const installed = result.data?.some((c: any) => c.componentId === id);
       setIsInstalled(installed);
     } catch (error) {
       console.error('检查安装状态失败:', error);

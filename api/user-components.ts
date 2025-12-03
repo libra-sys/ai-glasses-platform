@@ -35,19 +35,20 @@ export default async function handler(req: any, res: any) {
       if (error) throw error;
 
       const userComponents = data?.map(uc => ({
-        id: uc.component.id,
+        componentId: uc.component.id,
         name: uc.component.name,
         description: uc.component.description,
+        icon: uc.component.image_url,
+        color: '#4A90E2',
+        version: uc.component.version || '1.0.0',
         category: uc.component.category,
-        version: uc.component.version,
-        file_url: uc.component.file_url,
-        image_url: uc.component.image_url,
-        installed_at: uc.installed_at,
-        config: uc.config,
+        config: uc.config || {},
+        fileUrl: uc.component.file_url,
+        installedAt: uc.installed_at,
         enabled: uc.enabled
       })) || [];
 
-      return res.status(200).json({ components: userComponents });
+      return res.status(200).json({ data: userComponents });
     }
 
     if (method === 'POST') {
@@ -68,12 +69,12 @@ export default async function handler(req: any, res: any) {
 
       if (error) {
         if (error.code === '23505') {
-          return res.status(200).json({ message: 'Component already installed' });
+          return res.status(200).json({ success: true, message: 'Component already installed' });
         }
         throw error;
       }
 
-      return res.status(200).json({ message: 'Component installed', data });
+      return res.status(200).json({ success: true, message: 'Component installed', data });
     }
 
     if (method === 'DELETE') {
@@ -91,7 +92,7 @@ export default async function handler(req: any, res: any) {
 
       if (error) throw error;
 
-      return res.status(200).json({ message: 'Component uninstalled' });
+      return res.status(200).json({ success: true, message: 'Component uninstalled' });
     }
 
     return res.status(405).json({ error: 'Method not allowed' });
