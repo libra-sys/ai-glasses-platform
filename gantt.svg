@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <!-- 标题 -->
+  <text x="600" y="50" text-anchor="middle" font-size="26" font-weight="bold" fill="#2c3e50">AI眼镜组件发布平台 - 甘特图</text>
+  
+  <!-- 背景 -->
+  <rect width="1200" height="700" fill="#f8f9fa"/>
+  
+  <!-- 时间轴 -->
+  <rect x="200" y="100" width="950" height="60" rx="8" fill="#ffffff" stroke="#3498db" stroke-width="2"/>
+  
+  <!-- 时间标签 -->
+  <text x="100" y="135" text-anchor="end" font-size="16" font-weight="bold" fill="#2c3e50">任务</text>
+  
+  <!-- 月份标签 -->
+  <text x="300" y="135" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">9月</text>
+  <text x="500" y="135" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">10月</text>
+  <text x="700" y="135" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">11月</text>
+  <text x="900" y="135" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">12月</text>
+  
+  <!-- 月份分隔线 -->
+  <line x1="200" y1="160" x2="1150" y2="160" stroke="#3498db" stroke-width="2"/>
+  <line x1="400" y1="160" x2="400" y2="600" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="600" y1="160" x2="600" y2="600" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="800" y1="160" x2="800" y2="600" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="1000" y1="160" x2="1000" y2="600" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- 任务行 -->
+  <g>
+    <!-- 任务1：需求分析与设计 -->
+    <text x="100" y="210" text-anchor="end" font-size="16" fill="#2c3e50">1. 需求分析与设计</text>
+    <rect x="200" y="190" width="200" height="40" rx="6" fill="#4caf50" stroke="#388e3c" stroke-width="2"/>
+    <text x="300" y="215" text-anchor="middle" font-size="14" font-weight="bold" fill="white">9.1-9.30</text>
+  </g>
+  
+  <g>
+    <!-- 任务2：前端开发 -->
+    <text x="100" y="270" text-anchor="end" font-size="16" fill="#2c3e50">2. 前端开发</text>
+    <rect x="280" y="250" width="640" height="40" rx="6" fill="#2196f3" stroke="#1976d2" stroke-width="2"/>
+    <text x="600" y="275" text-anchor="middle" font-size="14" font-weight="bold" fill="white">9.15-12.31</text>
+  </g>
+  
+  <g>
+    <!-- 任务3：后端开发 -->
+    <text x="100" y="330" text-anchor="end" font-size="16" fill="#2c3e50">3. 后端开发</text>
+    <rect x="280" y="310" width="640" height="40" rx="6" fill="#ff9800" stroke="#f57c00" stroke-width="2"/>
+    <text x="600" y="335" text-anchor="middle" font-size="14" font-weight="bold" fill="white">9.15-12.31</text>
+  </g>
+  
+  <g>
+    <!-- 任务4：AI服务集成 -->
+    <text x="100" y="390" text-anchor="end" font-size="16" fill="#2c3e50">4. AI服务集成</text>
+    <rect x="500" y="370" width="300" height="40" rx="6" fill="#9c27b0" stroke="#7b1fa2" stroke-width="2"/>
+    <text x="650" y="395" text-anchor="middle" font-size="14" font-weight="bold" fill="white">10.15-12.31</text>
+  </g>
+  
+  <g>
+    <!-- 任务5：测试与调试 -->
+    <text x="100" y="450" text-anchor="end" font-size="16" fill="#2c3e50">5. 测试与调试</text>
+    <rect x="700" y="430" width="300" height="40" rx="6" fill="#f44336" stroke="#d32f2f" stroke-width="2"/>
+    <text x="850" y="455" text-anchor="middle" font-size="14" font-weight="bold" fill="white">11.15-12.31</text>
+  </g>
+  
+  <g>
+    <!-- 任务6：文档编写 -->
+    <text x="100" y="510" text-anchor="end" font-size="16" fill="#2c3e50">6. 文档编写</text>
+    <rect x="900" y="490" width="200" height="40" rx="6" fill="#00bcd4" stroke="#0097a7" stroke-width="2"/>
+    <text x="1000" y="515" text-anchor="middle" font-size="14" font-weight="bold" fill="white">12.1-12.31</text>
+  </g>
+  
+  <!-- 里程碑 -->
+  <circle cx="400" cy="210" r="18" fill="#ffc107" stroke="#ff9800" stroke-width="2"/>
+  <text x="400" y="215" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">M1</text>
+  <text x="400" y="240" text-anchor="middle" font-size="12" fill="#666">设计完成</text>
+  
+  <circle cx="800" cy="330" r="18" fill="#ffc107" stroke="#ff9800" stroke-width="2"/>
+  <text x="800" y="335" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">M2</text>
+  <text x="800" y="360" text-anchor="middle" font-size="12" fill="#666">开发完成</text>
+  
+  <circle cx="1000" cy="450" r="18" fill="#ffc107" stroke="#ff9800" stroke-width="2"/>
+  <text x="1000" y="455" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">M3</text>
+  <text x="1000" y="480" text-anchor="middle" font-size="12" fill="#666">测试完成</text>
+  
+  <circle cx="1000" cy="510" r="18" fill="#ffc107" stroke="#ff9800" stroke-width="2"/>
+  <text x="1000" y="515" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">M4</text>
+  <text x="1000" y="540" text-anchor="middle" font-size="12" fill="#666">正式上线</text>
+  
+  <!-- 图例 -->
+  <text x="600" y="640" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">图例</text>
+  
+  <rect x="300" y="660" width="24" height="24" rx="4" fill="#4caf50" stroke="#388e3c" stroke-width="2"/>
+  <text x="334" y="676" font-size="14" fill="#2c3e50">需求分析与设计</text>
+  
+  <rect x="450" y="660" width="24" height="24" rx="4" fill="#2196f3" stroke="#1976d2" stroke-width="2"/>
+  <text x="484" y="676" font-size="14" fill="#2c3e50">前端开发</text>
+  
+  <rect x="580" y="660" width="24" height="24" rx="4" fill="#ff9800" stroke="#f57c00" stroke-width="2"/>
+  <text x="614" y="676" font-size="14" fill="#2c3e50">后端开发</text>
+  
+  <rect x="710" y="660" width="24" height="24" rx="4" fill="#9c27b0" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="744" y="676" font-size="14" fill="#2c3e50">AI服务集成</text>
+  
+  <rect x="840" y="660" width="24" height="24" rx="4" fill="#f44336" stroke="#d32f2f" stroke-width="2"/>
+  <text x="874" y="676" font-size="14" fill="#2c3e50">测试与调试</text>
+  
+  <rect x="980" y="660" width="24" height="24" rx="4" fill="#00bcd4" stroke="#0097a7" stroke-width="2"/>
+  <text x="1014" y="676" font-size="14" fill="#2c3e50">文档编写</text>
+  
+  <circle cx="1130" y="672" r="12" fill="#ffc107" stroke="#ff9800" stroke-width="2"/>
+  <text x="1164" y="676" font-size="14" fill="#2c3e50">里程碑</text>
+</svg>

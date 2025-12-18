@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000">
+  <!-- 标题 -->
+  <text x="600" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">AI眼镜组件发布平台 - 系统架构图</text>
+  
+  <!-- 背景 -->
+  <rect width="1200" height="1000" fill="#f8f9fa"/>
+  
+  <!-- 网格线 -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e9ecef" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="1000" fill="url(#grid)" opacity="0.5"/>
+  
+  <!-- 前端应用层 -->
+  <rect x="50" y="50" width="1100" height="120" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="3"/>
+  <text x="600" y="80" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">前端应用层</text>
+  <text x="600" y="105" text-anchor="middle" font-size="14" fill="#e0e0e0">（用户界面与交互）</text>
+  
+  <!-- 前端组件 -->
+  <!-- 组件管理界面 -->
+  <rect x="80" y="130" width="200" height="100" rx="8" fill="#ffffff" stroke="#3498db" stroke-width="2"/>
+  <text x="180" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">组件管理界面</text>
+  <text x="180" y="185" text-anchor="middle" font-size="12" fill="#7f8c8d">组件列表、详情、搜索</text>
+  <text x="180" y="205" text-anchor="middle" font-size="12" fill="#7f8c8d">组件预览、分类筛选</text>
+  
+  <!-- 用户管理界面 -->
+  <rect x="300" y="130" width="200" height="100" rx="8" fill="#ffffff" stroke="#3498db" stroke-width="2"/>
+  <text x="400" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">用户管理界面</text>
+  <text x="400" y="185" text-anchor="middle" font-size="12" fill="#7f8c8d">用户注册、登录</text>
+  <text x="400" y="205" text-anchor="middle" font-size="12" fill="#7f8c8d">个人信息管理</text>
+  
+  <!-- 发布管理界面 -->
+  <rect x="520" y="130" width="200" height="100" rx="8" fill="#ffffff" stroke="#3498db" stroke-width="2"/>
+  <text x="620" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">发布管理界面</text>
+  <text x="620" y="185" text-anchor="middle" font-size="12" fill="#7f8c8d">组件上传、信息填写</text>
+  <text x="620" y="205" text-anchor="middle" font-size="12" fill="#7f8c8d">发布审核状态</text>
+  
+  <!-- AI工具界面 -->
+  <rect x="740" y="130" width="200" height="100" rx="8" fill="#ffffff" stroke="#3498db" stroke-width="2"/>
+  <text x="840" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">AI工具界面</text>
+  <text x="840" y="185" text-anchor="middle" font-size="12" fill="#7f8c8d">AI描述生成</text>
+  <text x="840" y="205" text-anchor="middle" font-size="12" fill="#7f8c8d">视觉效果预览</text>
+  
+  <!-- 管理员界面 -->
+  <rect x="960" y="130" width="200" height="100" rx="8" fill="#ffffff" stroke="#3498db" stroke-width="2"/>
+  <text x="1060" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">管理员界面</text>
+  <text x="1060" y="185" text-anchor="middle" font-size="12" fill="#7f8c8d">组件审核、用户管理</text>
+  <text x="1060" y="205" text-anchor="middle" font-size="12" fill="#7f8c8d">系统设置、数据统计</text>
+  
+  <!-- 后端服务层 -->
+  <rect x="50" y="230" width="1100" height="120" rx="8" fill="#2ecc71" stroke="#27ae60" stroke-width="3"/>
+  <text x="600" y="260" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">后端服务层</text>
+  <text x="600" y="285" text-anchor="middle" font-size="14" fill="#e0e0e0">（业务逻辑与数据处理）</text>
+  
+  <!-- 后端组件 -->
+  <!-- API网关 -->
+  <rect x="80" y="310" width="200" height="100" rx="8" fill="#ffffff" stroke="#2ecc71" stroke-width="2"/>
+  <text x="180" y="345" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">API网关</text>
+  <text x="180" y="365" text-anchor="middle" font-size="12" fill="#7f8c8d">请求路由、权限验证</text>
+  <text x="180" y="385" text-anchor="middle" font-size="12" fill="#7f8c8d">负载均衡、限流</text>
+  
+  <!-- 组件管理服务 -->
+  <rect x="300" y="310" width="200" height="100" rx="8" fill="#ffffff" stroke="#2ecc71" stroke-width="2"/>
+  <text x="400" y="345" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">组件管理服务</text>
+  <text x="400" y="365" text-anchor="middle" font-size="12" fill="#7f8c8d">组件CRUD操作</text>
+  <text x="400" y="385" text-anchor="middle" font-size="12" fill="#7f8c8d">版本控制、状态管理</text>
+  
+  <!-- 用户管理服务 -->
+  <rect x="520" y="310" width="200" height="100" rx="8" fill="#ffffff" stroke="#2ecc71" stroke-width="2"/>
+  <text x="620" y="345" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">用户管理服务</text>
+  <text x="620" y="365" text-anchor="middle" font-size="12" fill="#7f8c8d">用户认证、授权</text>
+  <text x="620" y="385" text-anchor="middle" font-size="12" fill="#7f8c8d">角色管理、个人资料</text>
+  
+  <!-- 审核管理服务 -->
+  <rect x="740" y="310" width="200" height="100" rx="8" fill="#ffffff" stroke="#2ecc71" stroke-width="2"/>
+  <text x="840" y="345" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">审核管理服务</text>
+  <text x="840" y="365" text-anchor="middle" font-size="12" fill="#7f8c8d">组件审核流程</text>
+  <text x="840" y="385" text-anchor="middle" font-size="12" fill="#7f8c8d">审核记录、通知</text>
+  
+  <!-- 搜索服务 -->
+  <rect x="960" y="310" width="200" height="100" rx="8" fill="#ffffff" stroke="#2ecc71" stroke-width="2"/>
+  <text x="1060" y="345" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">搜索服务</text>
+  <text x="1060" y="365" text-anchor="middle" font-size="12" fill="#7f8c8d">全文搜索、过滤</text>
+  <text x="1060" y="385" text-anchor="middle" font-size="12" fill="#7f8c8d">排序、推荐</text>
+  
+  <!-- AI服务层 -->
+  <rect x="50" y="450" width="1100" height="120" rx="8" fill="#e74c3c" stroke="#c0392b" stroke-width="3"/>
+  <text x="600" y="480" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">AI服务层</text>
+  <text x="600" y="505" text-anchor="middle" font-size="14" fill="#e0e0e0">（智能增强与辅助功能）</text>
+  
+  <!-- AI服务组件 -->
+  <!-- 组件描述生成器 -->
+  <rect x="80" y="530" width="200" height="100" rx="8" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="180" y="565" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">组件描述生成器</text>
+  <text x="180" y="585" text-anchor="middle" font-size="12" fill="#7f8c8d">自动生成组件描述</text>
+  <text x="180" y="605" text-anchor="middle" font-size="12" fill="#7f8c8d">关键词提取、优化</text>
+  
+  <!-- 视觉效果预览 -->
+  <rect x="300" y="530" width="200" height="100" rx="8" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="400" y="565" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">视觉效果预览</text>
+  <text x="400" y="585" text-anchor="middle" font-size="12" fill="#7f8c8d">组件渲染预览</text>
+  <text x="400" y="605" text-anchor="middle" font-size="12" fill="#7f8c8d">多设备适配模拟</text>
+  
+  <!-- 智能分类系统 -->
+  <rect x="520" y="530" width="200" height="100" rx="8" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="620" y="565" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">智能分类系统</text>
+  <text x="620" y="585" text-anchor="middle" font-size="12" fill="#7f8c8d">自动分类、标签生成</text>
+  <text x="620" y="605" text-anchor="middle" font-size="12" fill="#7f8c8d">相似组件推荐</text>
+  
+  <!-- 质量检测服务 -->
+  <rect x="740" y="530" width="200" height="100" rx="8" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="840" y="565" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">质量检测服务</text>
+  <text x="840" y="585" text-anchor="middle" font-size="12" fill="#7f8c8d">代码质量检查</text>
+  <text x="840" y="605" text-anchor="middle" font-size="12" fill="#7f8c8d">安全漏洞扫描</text>
+  
+  <!-- 数据存储层 -->
+  <rect x="50" y="670" width="1100" height="100" rx="8" fill="#f39c12" stroke="#e67e22" stroke-width="3"/>
+  <text x="600" y="700" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">数据存储层</text>
+  <text x="600" y="725" text-anchor="middle" font-size="14" fill="#e0e0e0">（数据持久化与管理）</text>
+  
+  <!-- 数据存储组件 -->
+  <!-- 主数据库 -->
+  <rect x="100" y="730" width="250" height="80" rx="8" fill="#ffffff" stroke="#f39c12" stroke-width="2"/>
+  <text x="225" y="760" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">主数据库</text>
+  <text x="225" y="780" text-anchor="middle" font-size="12" fill="#7f8c8d">用户、组件、审核数据</text>
+  
+  <!-- 文件存储 -->
+  <rect x="380" y="730" width="250" height="80" rx="8" fill="#ffffff" stroke="#f39c12" stroke-width="2"/>
+  <text x="505" y="760" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">文件存储</text>
+  <text x="505" y="780" text-anchor="middle" font-size="12" fill="#7f8c8d">组件文件、图片、文档</text>
+  
+  <!-- 缓存系统 -->
+  <rect x="660" y="730" width="250" height="80" rx="8" fill="#ffffff" stroke="#f39c12" stroke-width="2"/>
+  <text x="785" y="760" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">缓存系统</text>
+  <text x="785" y="780" text-anchor="middle" font-size="12" fill="#7f8c8d">热门组件、会话数据</text>
+  
+  <!-- 日志系统 -->
+  <rect x="940" y="730" width="250" height="80" rx="8" fill="#ffffff" stroke="#f39c12" stroke-width="2"/>
+  <text x="1065" y="760" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">日志系统</text>
+  <text x="1065" y="780" text-anchor="middle" font-size="12" fill="#7f8c8d">操作日志、系统日志</text>
+  
+  <!-- 连接线 -->
+  <!-- 前端应用层到后端服务层 -->
+  <line x1="180" y1="230" x2="180" y2="230" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="230" x2="400" y2="230" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="620" y1="230" x2="620" y2="230" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="840" y1="230" x2="840" y2="230" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="1060" y1="230" x2="1060" y2="230" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 后端服务层到AI服务层 -->
+  <line x1="180" y1="410" x2="180" y2="450" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="410" x2="400" y2="450" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="620" y1="410" x2="620" y2="450" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="840" y1="410" x2="840" y2="450" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="1060" y1="410" x2="1060" y2="450" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 后端服务层到数据存储层 -->
+  <line x1="180" y1="410" x2="180" y2="670" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="410" x2="400" y2="670" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="620" y1="410" x2="620" y2="670" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="840" y1="410" x2="840" y2="670" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="1060" y1="410" x2="1060" y2="670" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- AI服务层到数据存储层 -->
+  <line x1="180" y1="630" x2="180" y2="670" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="630" x2="400" y2="670" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="620" y1="630" x2="620" y2="670" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="840" y1="630" x2="840" y2="670" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头定义 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  
+  <!-- 图例 -->
+  <rect x="50" y="850" width="20" height="20" rx="4" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="80" y="865" font-size="14" fill="#2c3e50">前端应用层</text>
+  
+  <rect x="200" y="850" width="20" height="20" rx="4" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+  <text x="230" y="865" font-size="14" fill="#2c3e50">后端服务层</text>
+  
+  <rect x="350" y="850" width="20" height="20" rx="4" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="380" y="865" font-size="14" fill="#2c3e50">AI服务层</text>
+  
+  <rect x="500" y="850" width="20" height="20" rx="4" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="530" y="865" font-size="14" fill="#2c3e50">数据存储层</text>
+  
+  <rect x="650" y="850" width="20" height="20" rx="4" fill="#ffffff" stroke="#3498db" stroke-width="2"/>
+  <text x="680" y="865" font-size="14" fill="#2c3e50">功能模块</text>
+  
+  <line x1="800" y1="840" x2="830" y2="840" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="880" y="865" font-size="14" fill="#2c3e50">数据流/调用关系</text>
+</svg>

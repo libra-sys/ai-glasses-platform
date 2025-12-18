@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <!-- 标题 -->
+  <text x="600" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">AI眼镜组件发布平台 - 用例图</text>
+  
+  <!-- 背景 -->
+  <rect width="1200" height="800" fill="#f8f9fa"/>
+  
+  <!-- 网格线 -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e9ecef" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#grid)" opacity="0.5"/>
+  
+  <!-- 角色层 -->
+  <rect x="450" y="80" width="300" height="80" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="600" y="120" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">系统角色</text>
+  
+  <!-- 普通用户 -->
+  <rect x="300" y="180" width="200" height="60" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="400" y="215" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">普通用户</text>
+  
+  <!-- 管理员 -->
+  <rect x="600" y="180" width="200" height="60" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="700" y="215" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">管理员</text>
+  
+  <!-- AI服务 -->
+  <rect x="900" y="180" width="200" height="60" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="1000" y="215" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">AI服务</text>
+  
+  <!-- 基础用户功能 -->
+  <rect x="500" y="280" width="200" height="60" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="600" y="315" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">基础用户功能</text>
+  
+  <!-- 注册/登录 -->
+  <rect x="300" y="360" width="150" height="50" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="375" y="390" text-anchor="middle" font-size="12" fill="#2c3e50">注册/登录</text>
+  
+  <!-- 浏览组件 -->
+  <rect x="500" y="360" width="150" height="50" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="575" y="390" text-anchor="middle" font-size="12" fill="#2c3e50">浏览组件</text>
+  
+  <!-- 搜索组件 -->
+  <rect x="700" y="360" width="150" height="50" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="775" y="390" text-anchor="middle" font-size="12" fill="#2c3e50">搜索组件</text>
+  
+  <!-- 下载组件 -->
+  <rect x="900" y="360" width="150" height="50" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="975" y="390" text-anchor="middle" font-size="12" fill="#2c3e50">下载组件</text>
+  
+  <!-- 评论评分 -->
+  <rect x="500" y="430" width="150" height="50" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="575" y="460" text-anchor="middle" font-size="12" fill="#2c3e50">评论评分</text>
+  
+  <!-- 组件管理功能 -->
+  <rect x="500" y="500" width="200" height="60" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="600" y="535" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">组件管理功能</text>
+  
+  <!-- 发布组件 -->
+  <rect x="300" y="570" width="150" height="50" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="375" y="600" text-anchor="middle" font-size="12" fill="#2c3e50">发布组件</text>
+  
+  <!-- 审核组件 -->
+  <rect x="500" y="570" width="150" height="50" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="575" y="600" text-anchor="middle" font-size="12" fill="#2c3e50">审核组件</text>
+  
+  <!-- 管理组件 -->
+  <rect x="700" y="570" width="150" height="50" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="775" y="600" text-anchor="middle" font-size="12" fill="#2c3e50">管理组件</text>
+  
+  <!-- 管理用户 -->
+  <rect x="900" y="570" width="150" height="50" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="975" y="600" text-anchor="middle" font-size="12" fill="#2c3e50">管理用户</text>
+  
+  <!-- AI服务功能 -->
+  <rect x="500" y="640" width="200" height="60" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="600" y="675" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">AI服务功能</text>
+  
+  <!-- 生成图片 -->
+  <rect x="300" y="710" width="150" height="50" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="375" y="740" text-anchor="middle" font-size="12" fill="#2c3e50">生成图片</text>
+  
+  <!-- AI搜索 -->
+  <rect x="500" y="710" width="150" height="50" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="575" y="740" text-anchor="middle" font-size="12" fill="#2c3e50">AI搜索</text>
+  
+  <!-- 网页总结 -->
+  <rect x="700" y="710" width="150" height="50" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="775" y="740" text-anchor="middle" font-size="12" fill="#2c3e50">网页总结</text>
+  
+  <!-- 发布公告 -->
+  <rect x="900" y="710" width="150" height="50" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="975" y="740" text-anchor="middle" font-size="12" fill="#2c3e50">发布公告</text>
+  
+  <!-- 连接线 -->
+  <!-- 角色到功能层的连接 -->
+  <line x1="400" y1="240" x2="400" y2="280" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="700" y1="240" x2="700" y2="280" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="1000" y1="240" x2="1000" y2="280" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 功能层到具体功能的连接 -->
+  <line x1="600" y1="340" x2="375" y2="360" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="340" x2="575" y2="360" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="340" x2="775" y2="360" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="340" x2="975" y2="360" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="340" x2="575" y2="430" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 组件管理功能层的连接 -->
+  <line x1="600" y1="480" x2="375" y2="570" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="480" x2="575" y2="570" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="480" x2="775" y2="570" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="480" x2="975" y2="570" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- AI服务功能层的连接 -->
+  <line x1="600" y1="620" x2="375" y2="710" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="620" x2="575" y2="710" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="620" x2="775" y2="710" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="620" x2="975" y2="710" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头定义 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  
+  <!-- 图例 -->
+  <rect x="50" y="720" width="20" height="20" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="80" y="735" font-size="14" fill="#2c3e50">功能层</text>
+  
+  <rect x="200" y="720" width="20" height="20" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="230" y="735" font-size="14" fill="#2c3e50">系统角色</text>
+  
+  <rect x="350" y="720" width="20" height="20" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="380" y="735" font-size="14" fill="#2c3e50">具体功能</text>
+</svg>

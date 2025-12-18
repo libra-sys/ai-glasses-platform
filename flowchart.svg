@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="600" viewBox="0 0 1400 600">
+  <!-- 标题 -->
+  <text x="700" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">AI眼镜组件发布平台 - 组件发布流程图</text>
+  
+  <!-- 背景 -->
+  <rect width="1400" height="600" fill="#f8f9fa"/>
+  
+  <!-- 网格线 -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e9ecef" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1400" height="600" fill="url(#grid)" opacity="0.5"/>
+  
+  <!-- 开始节点 -->
+  <circle cx="200" cy="120" r="40" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+  <text x="200" y="125" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">开始</text>
+  
+  <!-- 用户登录 -->
+  <rect x="120" y="200" width="160" height="80" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="200" y="230" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">用户登录</text>
+  <text x="200" y="255" text-anchor="middle" font-size="12" fill="#e0e0e0">（注册/登录系统）</text>
+  
+  <!-- 访问发布页面 -->
+  <rect x="340" y="200" width="160" height="80" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="420" y="230" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">访问发布页面</text>
+  <text x="420" y="255" text-anchor="middle" font-size="12" fill="#e0e0e0">（进入组件发布界面）</text>
+  
+  <!-- 填写组件信息 -->
+  <rect x="560" y="200" width="160" height="80" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="640" y="230" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">填写组件信息</text>
+  <text x="640" y="255" text-anchor="middle" font-size="12" fill="#e0e0e0">（名称、描述、分类等）</text>
+  
+  <!-- 上传组件文件 -->
+  <rect x="780" y="200" width="160" height="80" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="860" y="230" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">上传组件文件</text>
+  <text x="860" y="255" text-anchor="middle" font-size="12" fill="#e0e0e0">（ZIP包、图片等）</text>
+  
+  <!-- 提交审核 -->
+  <rect x="1000" y="200" width="160" height="80" rx="8" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="1080" y="230" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">提交审核</text>
+  <text x="1080" y="255" text-anchor="middle" font-size="12" fill="#e0e0e0">（等待管理员审核）</text>
+  
+  <!-- 审核中 -->
+  <rect x="1000" y="320" width="160" height="80" rx="8" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+  <text x="1080" y="350" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">审核中</text>
+  <text x="1080" y="375" text-anchor="middle" font-size="12" fill="#e0e0e0">（管理员检查组件）</text>
+  
+  <!-- 审核通过？ -->
+  <polygon points="1000,440 1080,400 1160,440 1080,480" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="1080" y="450" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">审核通过？</text>
+  <text x="1080" y="475" text-anchor="middle" font-size="12" fill="#e0e0e0">（管理员审核结果）</text>
+  
+  <!-- 审核通过 -->
+  <rect x="780" y="520" width="160" height="60" rx="8" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+  <text x="860" y="550" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">审核通过</text>
+  
+  <!-- 组件上线 -->
+  <rect x="560" y="520" width="160" height="60" rx="8" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+  <text x="640" y="550" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">组件上线</text>
+  
+  <!-- 审核不通过 -->
+  <rect x="1100" y="440" width="160" height="60" rx="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="1180" y="470" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">审核不通过</text>
+  
+  <!-- 修改组件 -->
+  <rect x="1100" y="520" width="160" height="60" rx="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="1180" y="550" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">修改组件</text>
+  
+  <!-- 连接线 -->
+  <!-- 开始到登录 -->
+  <line x1="200" y1="160" x2="200" y2="200" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 登录到访问页面 -->
+  <line x1="280" y1="240" x2="340" y2="240" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 访问页面到填写信息 -->
+  <line x1="500" y1="240" x2="560" y2="240" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 填写信息到上传文件 -->
+  <line x1="720" y1="240" x2="780" y2="240" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 上传文件到提交审核 -->
+  <line x1="940" y1="240" x2="1000" y2="240" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 提交审核到审核中 -->
+  <line x1="1080" y1="280" x2="1080" y2="320" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 审核中到审核通过？ -->
+  <line x1="1080" y1="400" x2="1080" y2="440" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 审核通过到组件上线 -->
+  <line x1="1000" y1="480" x2="780" y2="520" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 审核通过到组件上线 -->
+  <line x1="860" y1="520" x2="640" y2="520" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 审核不通过到修改组件 -->
+  <line x1="1160" y1="470" x2="1160" y2="520" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 修改组件到填写信息 -->
+  <line x1="1100" y1="520" x2="1100" y2="480" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="1100" y1="480" x2="900" y2="480" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="900" y1="480" x2="720" y2="280" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头定义 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  
+  <!-- 菱形形状定义 -->
+  <defs>
+    <symbol id="diamond" viewBox="0 0 100 100">
+      <polygon points="50,0 100,50 50,100 0,50" fill="currentColor"/>
+    </symbol>
+  </defs>
+  
+  <!-- 图例 -->
+  <rect x="50" y="520" width="20" height="20" rx="4" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+  <text x="80" y="535" font-size="14" fill="#2c3e50">开始/成功</text>
+  
+  <rect x="50" y="550" width="20" height="20" rx="4" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="80" y="565" font-size="14" fill="#2c3e50">操作步骤</text>
+  
+  <rect x="200" y="520" width="20" height="20" rx="4" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="230" y="535" font-size="14" fill="#2c3e50">提交审核</text>
+  
+  <rect x="200" y="550" width="20" height="20" rx="4" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+  <text x="230" y="565" font-size="14" fill="#2c3e50">审核中</text>
+  
+  <polygon points="340,530 360,540 340,550 320,540" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="380" y="545" font-size="14" fill="#2c3e50">判断条件</text>
+  
+  <rect x="320" y="520" width="20" height="20" rx="4" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="350" y="535" font-size="14" fill="#2c3e50">失败/修改</text>
+</svg>

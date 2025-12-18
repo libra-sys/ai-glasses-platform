@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <!-- 标题 -->
+  <text x="600" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">AI眼镜组件发布平台 - 主界面原型图</text>
+  
+  <!-- 背景 -->
+  <rect width="1200" height="800" fill="#f5f5f5"/>
+  
+  <!-- 导航栏 -->
+  <rect x="0" y="50" width="1200" height="60" fill="#2196f3" stroke="#1976d2" stroke-width="2"/>
+  
+  <!-- Logo -->
+  <rect x="20" y="60" width="40" height="40" rx="4" fill="white"/>
+  <text x="40" y="87" text-anchor="middle" font-size="20" font-weight="bold" fill="#2196f3">AI</text>
+  <text x="100" y="85" font-size="18" font-weight="bold" fill="white">眼镜组件发布平台</text>
+  
+  <!-- 导航菜单 -->
+  <rect x="250" y="70" width="80" height="30" rx="15" fill="#1976d2"/>
+  <text x="290" y="88" text-anchor="middle" font-size="14" fill="white">首页</text>
+  
+  <rect x="350" y="70" width="100" height="30" rx="15" fill="white"/>
+  <text x="400" y="88" text-anchor="middle" font-size="14" fill="#2196f3">组件市场</text>
+  
+  <rect x="470" y="70" width="100" height="30" rx="15" fill="white"/>
+  <text x="520" y="88" text-anchor="middle" font-size="14" fill="#2196f3">AI工具箱</text>
+  
+  <rect x="590" y="70" width="100" height="30" rx="15" fill="white"/>
+  <text x="640" y="88" text-anchor="middle" font-size="14" fill="#2196f3">社区论坛</text>
+  
+  <rect x="710" y="70" width="100" height="30" rx="15" fill="white"/>
+  <text x="760" y="88" text-anchor="middle" font-size="14" fill="#2196f3">关于我们</text>
+  
+  <!-- 用户区域 -->
+  <rect x="1050" y="70" width="120" height="30" rx="15" fill="white" stroke="#1976d2" stroke-width="1"/>
+  <text x="1110" y="88" text-anchor="middle" font-size="14" fill="#2196f3">用户中心</text>
+  
+  <!-- 搜索栏 -->
+  <rect x="830" y="70" width="200" height="30" rx="15" fill="white"/>
+  <circle cx="1005" cy="85" r="8" fill="#9e9e9e"/>
+  <path d="M 998 82 L 1004 88 L 1012 80" stroke="white" stroke-width="2" fill="none"/>
+  <text x="850" y="88" font-size="12" fill="#9e9e9e">搜索组件...</text>
+  
+  <!-- 主内容区 -->
+  <rect x="20" y="130" width="900" height="650" rx="8" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- 左侧边栏 -->
+  <rect x="940" y="130" width="240" height="650" rx="8" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- 轮播图 -->
+  <rect x="40" y="150" width="860" height="200" rx="8" fill="#e3f2fd" stroke="#bbdefb" stroke-width="1"/>
+  <text x="470" y="250" text-anchor="middle" font-size="24" font-weight="bold" fill="#2196f3">欢迎使用AI眼镜组件发布平台</text>
+  <rect x="420" y="280" width="100" height="40" rx="20" fill="#4caf50"/>
+  <text x="470" y="305" text-anchor="middle" font-size="16" font-weight="bold" fill="white">立即发布</text>
+  
+  <!-- 分类标签 -->
+  <text x="40" y="380" font-size="18" font-weight="bold" fill="#333">组件分类</text>
+  
+  <rect x="40" y="400" width="120" height="40" rx="20" fill="#e0f7fa" stroke="#00bcd4" stroke-width="1"/>
+  <text x="100" y="425" text-anchor="middle" font-size="14" fill="#00bcd4">显示组件</text>
+  
+  <rect x="180" y="400" width="120" height="40" rx="20" fill="#e8f5e8" stroke="#4caf50" stroke-width="1"/>
+  <text x="240" y="425" text-anchor="middle" font-size="14" fill="#4caf50">交互组件</text>
+  
+  <rect x="320" y="400" width="120" height="40" rx="20" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <text x="380" y="425" text-anchor="middle" font-size="14" fill="#ff9800">音频组件</text>
+  
+  <rect x="460" y="400" width="120" height="40" rx="20" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+  <text x="520" y="425" text-anchor="middle" font-size="14" fill="#9c27b0">AI功能</text>
+  
+  <rect x="600" y="400" width="120" height="40" rx="20" fill="#ffcdd2" stroke="#f44336" stroke-width="1"/>
+  <text x="660" y="425" text-anchor="middle" font-size="14" fill="#f44336">工具组件</text>
+  
+  <rect x="740" y="400" width="120" height="40" rx="20" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
+  <text x="800" y="425" text-anchor="middle" font-size="14" fill="#9e9e9e">更多分类</text>
+  
+  <!-- 推荐组件 -->
+  <text x="40" y="470" font-size="18" font-weight="bold" fill="#333">推荐组件</text>
+  
+  <!-- 组件卡片1 -->
+  <rect x="40" y="490" width="260" height="200" rx="8" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="50" y="500" width="240" height="120" rx="4" fill="#e3f2fd"/>
+  <text x="170" y="570" text-anchor="middle" font-size="16" font-weight="bold" fill="#2196f3">智能导航组件</text>
+  <text x="60" y="630" font-size="12" fill="#666">• 基于AI的实时导航</text>
+  <text x="60" y="650" font-size="12" fill="#666">• 支持语音控制</text>
+  <rect x="180" y="660" width="80" height="30" rx="15" fill="#4caf50"/>
+  <text x="220" y="680" text-anchor="middle" font-size="12" font-weight="bold" fill="white">下载</text>
+  
+  <!-- 组件卡片2 -->
+  <rect x="320" y="490" width="260" height="200" rx="8" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="330" y="500" width="240" height="120" rx="4" fill="#e8f5e8"/>
+  <text x="450" y="570" text-anchor="middle" font-size="16" font-weight="bold" fill="#4caf50">语音助手组件</text>
+  <text x="340" y="630" font-size="12" fill="#666">• 智能语音识别</text>
+  <text x="340" y="650" font-size="12" fill="#666">• 自然语言交互</text>
+  <rect x="460" y="660" width="80" height="30" rx="15" fill="#4caf50"/>
+  <text x="500" y="680" text-anchor="middle" font-size="12" font-weight="bold" fill="white">下载</text>
+  
+  <!-- 组件卡片3 -->
+  <rect x="600" y="490" width="260" height="200" rx="8" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="610" y="500" width="240" height="120" rx="4" fill="#fff3e0"/>
+  <text x="730" y="570" text-anchor="middle" font-size="16" font-weight="bold" fill="#ff9800">AR增强现实组件</text>
+  <text x="620" y="630" font-size="12" fill="#666">• 实时环境识别</text>
+  <text x="620" y="650" font-size="12" fill="#666">• 3D物体渲染</text>
+  <rect x="740" y="660" width="80" height="30" rx="15" fill="#4caf50"/>
+  <text x="780" y="680" text-anchor="middle" font-size="12" font-weight="bold" fill="white">下载</text>
+  
+  <!-- 右侧边栏内容 -->
+  <text x="1060" y="160" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">热门推荐</text>
+  
+  <!-- 热门组件1 -->
+  <rect x="960" y="180" width="200" height="80" rx="4" fill="#f5f5f5"/>
+  <rect x="970" y="190" width="60" height="60" rx="4" fill="#e3f2fd"/>
+  <text x="1070" y="210" font-size="14" font-weight="bold" fill="#333">智能翻译</text>
+  <text x="1070" y="230" font-size="12" fill="#666">下载量: 1,234</text>
+  <rect x="1120" y="240" width="40" height="20" rx="10" fill="#4caf50"/>
+  <text x="1140" y="255" text-anchor="middle" font-size="10" fill="white">下载</text>
+  
+  <!-- 热门组件2 -->
+  <rect x="960" y="280" width="200" height="80" rx="4" fill="#f5f5f5"/>
+  <rect x="970" y="290" width="60" height="60" rx="4" fill="#e8f5e8"/>
+  <text x="1070" y="310" font-size="14" font-weight="bold" fill="#333">健康监测</text>
+  <text x="1070" y="330" font-size="12" fill="#666">下载量: 987</text>
+  <rect x="1120" y="340" width="40" height="20" rx="10" fill="#4caf50"/>
+  <text x="1140" y="355" text-anchor="middle" font-size="10" fill="white">下载</text>
+  
+  <!-- 热门组件3 -->
+  <rect x="960" y="380" width="200" height="80" rx="4" fill="#f5f5f5"/>
+  <rect x="970" y="390" width="60" height="60" rx="4" fill="#fff3e0"/>
+  <text x="1070" y="410" font-size="14" font-weight="bold" fill="#333">音乐播放器</text>
+  <text x="1070" y="430" font-size="12" fill="#666">下载量: 765</text>
+  <rect x="1120" y="440" width="40" height="20" rx="10" fill="#4caf50"/>
+  <text x="1140" y="455" text-anchor="middle" font-size="10" fill="white">下载</text>
+  
+  <!-- AI工具箱入口 -->
+  <rect x="960" y="490" width="200" height="120" rx="8" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+  <text x="1060" y="520" text-anchor="middle" font-size="16" font-weight="bold" fill="#9c27b0">AI工具箱</text>
+  <rect x="980" y="550" width="80" height="30" rx="15" fill="#9c27b0"/>
+  <text x="1020" y="570" text-anchor="middle" font-size="12" font-weight="bold" fill="white">图片生成</text>
+  <rect x="1080" y="550" width="80" height="30" rx="15" fill="#9c27b0"/>
+  <text x="1120" y="570" text-anchor="middle" font-size="12" font-weight="bold" fill="white">AI搜索</text>
+  <rect x="1030" y="590" width="80" height="30" rx="15" fill="#9c27b0"/>
+  <text x="1070" y="610" text-anchor="middle" font-size="12" font-weight="bold" fill="white">网页总结</text>
+  
+  <!-- 页脚 -->
+  <rect x="0" y="780" width="1200" height="20" fill="#2196f3"/>
+  <text x="600" y="795" text-anchor="middle" font-size="12" fill="white">© 2024 AI眼镜组件发布平台 - 版权所有</text>
+</svg>

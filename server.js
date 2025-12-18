@@ -20,6 +20,9 @@ import generateImageHandler from './api/generate-image.js';
 import translateHandler from './api/translate.js';
 import userComponentsHandler from './api/user-components.js';
 import miniappAuthHandler from './api/miniapp-auth.js';
+import dashboardKpiHandler from './api/dashboard/kpi.js';
+import dashboardFeatureRankingHandler from './api/dashboard/ai-feature-ranking.js';
+import dashboardEventsHandler from './api/dashboard/events.js';
 
 app.post('/api/spark-chat', async (req, res) => {
   try {
@@ -97,6 +100,33 @@ app.delete('/api/user-components', async (req, res) => {
 app.post('/api/miniapp-auth', async (req, res) => {
   try {
     await miniappAuthHandler(req, res);
+  } catch (error) {
+    console.error('API Error:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.get('/dashboard/kpi', async (req, res) => {
+  try {
+    await dashboardKpiHandler(req, res);
+  } catch (error) {
+    console.error('API Error:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.get('/dashboard/ai-feature-ranking', async (req, res) => {
+  try {
+    await dashboardFeatureRankingHandler(req, res);
+  } catch (error) {
+    console.error('API Error:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.get('/dashboard/events', async (req, res) => {
+  try {
+    await dashboardEventsHandler(req, res);
   } catch (error) {
     console.error('API Error:', error);
     res.status(500).json({ error: error.message });

@@ -1,0 +1,113 @@
+<svg width="1200" height="1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- 标题 -->
+  <text x="600" y="40" font-family="Microsoft YaHei" font-size="24" font-weight="bold" text-anchor="middle" fill="#333333">AI眼镜组件发布平台 - 项目测试流程图</text>
+  
+  <!-- 背景 -->
+  <rect x="50" y="60" width="1100" height="890" rx="10" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- 测试流程 -->
+  <text x="200" y="100" font-family="Microsoft YaHei" font-size="18" font-weight="bold" fill="#333333">测试流程</text>
+  
+  <!-- 开始节点 -->
+  <circle cx="200" cy="150" r="30" fill="#4CAF50" stroke="#2E7D32" stroke-width="2"/>
+  <text x="200" y="155" font-family="Microsoft YaHei" font-size="14" text-anchor="middle" fill="white" font-weight="bold">开始</text>
+  
+  <!-- 需求分析 -->
+  <rect x="120" y="220" width="160" height="60" rx="5" fill="#2196F3" stroke="#1565C0" stroke-width="2"/>
+  <text x="200" y="255" font-family="Microsoft YaHei" font-size="14" text-anchor="middle" fill="white" font-weight="bold">需求分析</text>
+  <line x1="200" y1="180" x2="200" y2="220" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 测试计划 -->
+  <rect x="120" y="310" width="160" height="60" rx="5" fill="#2196F3" stroke="#1565C0" stroke-width="2"/>
+  <text x="200" y="345" font-family="Microsoft YaHei" font-size="14" text-anchor="middle" fill="white" font-weight="bold">测试计划</text>
+  <line x1="200" y1="280" x2="200" y2="310" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 测试设计 -->
+  <rect x="120" y="400" width="160" height="60" rx="5" fill="#2196F3" stroke="#1565C0" stroke-width="2"/>
+  <text x="200" y="435" font-family="Microsoft YaHei" font-size="14" text-anchor="middle" fill="white" font-weight="bold">测试设计</text>
+  <line x1="200" y1="370" x2="200" y2="400" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 测试执行 -->
+  <rect x="120" y="490" width="160" height="60" rx="5" fill="#2196F3" stroke="#1565C0" stroke-width="2"/>
+  <text x="200" y="525" font-family="Microsoft YaHei" font-size="14" text-anchor="middle" fill="white" font-weight="bold">测试执行</text>
+  <line x1="200" y1="460" x2="200" y2="490" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 测试评估 -->
+  <rect x="120" y="580" width="160" height="60" rx="5" fill="#2196F3" stroke="#1565C0" stroke-width="2"/>
+  <text x="200" y="615" font-family="Microsoft YaHei" font-size="14" text-anchor="middle" fill="white" font-weight="bold">测试评估</text>
+  <line x1="200" y1="550" x2="200" y2="580" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 结束节点 -->
+  <circle cx="200" cy="720" r="30" fill="#F44336" stroke="#D32F2F" stroke-width="2"/>
+  <text x="200" y="725" font-family="Microsoft YaHei" font-size="14" text-anchor="middle" fill="white" font-weight="bold">结束</text>
+  <line x1="200" y1="640" x2="200" y2="690" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 项目测试方法 -->
+  <text x="700" y="100" font-family="Microsoft YaHei" font-size="18" font-weight="bold" fill="#333333">项目测试方法</text>
+  
+  <!-- 组件发布流程测试 -->
+  <rect x="450" y="150" width="500" height="90" rx="5" fill="#FF9800" stroke="#F57C00" stroke-width="2"/>
+  <text x="700" y="175" font-family="Microsoft YaHei" font-size="16" text-anchor="middle" fill="white" font-weight="bold">组件发布流程测试</text>
+  <text x="700" y="200" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" fill="white">测试组件名称、描述、分类、文件上传等功能</text>
+  <text x="700" y="225" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" fill="white">关联页面：Publish.tsx</text>
+  
+  <!-- 组件浏览与搜索测试 -->
+  <rect x="450" y="270" width="500" height="90" rx="5" fill="#FF9800" stroke="#F57C00" stroke-width="2"/>
+  <text x="700" y="295" font-family="Microsoft YaHei" font-size="16" text-anchor="middle" fill="white" font-weight="bold">组件浏览与搜索测试</text>
+  <text x="700" y="320" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" fill="white">测试组件列表、搜索、分类筛选等功能</text>
+  <text x="700" y="345" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" fill="white">关联页面：Components.tsx</text>
+  <line x1="700" y1="240" x2="700" y2="270" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 身份验证与权限测试 -->
+  <rect x="450" y="390" width="500" height="90" rx="5" fill="#FF9800" stroke="#F57C00" stroke-width="2"/>
+  <text x="700" y="415" font-family="Microsoft YaHei" font-size="16" text-anchor="middle" fill="white" font-weight="bold">身份验证与权限测试</text>
+  <text x="700" y="440" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" fill="white">测试用户登录、注册、角色权限控制等功能</text>
+  <text x="700" y="465" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" fill="white">关联页面：Login.tsx, Admin.tsx</text>
+  <line x1="700" y1="360" x2="700" y2="390" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- AI服务集成测试 -->
+  <rect x="450" y="510" width="500" height="90" rx="5" fill="#FF9800" stroke="#F57C00" stroke-width="2"/>
+  <text x="700" y="535" font-family="Microsoft YaHei" font-size="16" text-anchor="middle" fill="white" font-weight="bold">AI服务集成测试</text>
+  <text x="700" y="560" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" fill="white">测试AI生成描述、图像、翻译等服务功能</text>
+  <text x="700" y="585" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" fill="white">关联模块：spark-api.ts, generate-image.ts</text>
+  <line x1="700" y1="480" x2="700" y2="510" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 数据库与存储测试 -->
+  <rect x="450" y="630" width="500" height="90" rx="5" fill="#FF9800" stroke="#F57C00" stroke-width="2"/>
+  <text x="700" y="655" font-family="Microsoft YaHei" font-size="16" text-anchor="middle" fill="white" font-weight="bold">数据库与存储测试</text>
+  <text x="700" y="680" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" fill="white">测试组件数据存储、文件上传下载、数据一致性</text>
+  <text x="700" y="705" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" fill="white">关联模块：componentsApi, storageApi</text>
+  <line x1="700" y1="600" x2="700" y2="630" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 响应式设计测试 -->
+  <rect x="450" y="750" width="500" height="90" rx="5" fill="#FF9800" stroke="#F57C00" stroke-width="2"/>
+  <text x="700" y="775" font-family="Microsoft YaHei" font-size="16" text-anchor="middle" fill="white" font-weight="bold">响应式设计测试</text>
+  <text x="700" y="800" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" fill="white">测试页面在不同设备尺寸下的显示效果</text>
+  <text x="700" y="825" font-family="Microsoft YaHei" font-size="12" text-anchor="middle" fill="white">核心技术：Tailwind CSS, 响应式布局</text>
+  <line x1="700" y1="720" x2="700" y2="750" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 连接线：测试流程 -> 项目测试方法 -->
+  <line x1="280" y1="430" x2="450" y2="430" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头定义 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333333"/>
+    </marker>
+  </defs>
+  
+  <!-- 图例 -->
+  <text x="600" y="880" font-family="Microsoft YaHei" font-size="14" font-weight="bold" fill="#333333">图例</text>
+  
+  <!-- 流程节点图例 -->
+  <circle cx="400" cy="910" r="15" fill="#2196F3" stroke="#1565C0" stroke-width="2"/>
+  <text x="430" y="915" font-family="Microsoft YaHei" font-size="12" fill="#333333">测试流程节点</text>
+  
+  <!-- 测试方法图例 -->
+  <rect x="600" y="900" width="30" height="30" rx="5" fill="#FF9800" stroke="#F57C00" stroke-width="2"/>
+  <text x="650" y="915" font-family="Microsoft YaHei" font-size="12" fill="#333333">项目测试方法</text>
+  
+  <!-- 开始/结束节点图例 -->
+  <circle cx="800" cy="910" r="15" fill="#4CAF50" stroke="#2E7D32" stroke-width="2"/>
+  <text x="830" y="915" font-family="Microsoft YaHei" font-size="12" fill="#333333">开始/结束节点</text>
+</svg>
