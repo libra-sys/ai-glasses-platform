@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>大屏 API 测试</title>
+  <style>
+    body { font-family: monospace; padding: 20px; background: #1a1a1a; color: #0f0; }
+    pre { background: #000; padding: 10px; overflow: auto; }
+    button { padding: 10px 20px; margin: 10px 0; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>大屏 API 测试</h1>
+  <button onclick="testKPI()">测试 KPI</button>
+  <button onclick="testRanking()">测试排行</button>
+  <button onclick="testEvents()">测试事件</button>
+  <button onclick="testAll()">全部测试</button>
+  <pre id="output"></pre>
+
+  <script>
+    const baseUrl = 'https://help.hlw.work/api';
+    const output = document.getElementById('output');
+
+    function log(msg) {
+      output.textContent += msg + '\n';
+    }
+
+    async function testKPI() {
+      output.textContent = '';
+      log('测试 KPI 接口...');
+      try {
+        const res = await fetch(`${baseUrl}/dashboard/kpi`);
+        const data = await res.json();
+        log('KPI 数据:');
+        log(JSON.stringify(data, null, 2));
+      } catch (err) {
+        log('错误: ' + err.message);
+      }
+    }
+
+    async function testRanking() {
+      output.textContent = '';
+      log('测试组件排行接口...');
+      try {
+        const res = await fetch(`${baseUrl}/dashboard/ai-feature-ranking`);
+        const data = await res.json();
+        log('组件排行:');
+        log(JSON.stringify(data, null, 2));
+      } catch (err) {
+        log('错误: ' + err.message);
+      }
+    }
+
+    async function testEvents() {
+      output.textContent = '';
+      log('测试事件接口...');
+      try {
+        const res = await fetch(`${baseUrl}/dashboard/events?limit=5`);
+        const data = await res.json();
+        log('最近事件:');
+        log(JSON.stringify(data, null, 2));
+      } catch (err) {
+        log('错误: ' + err.message);
+      }
+    }
+
+    async function testAll() {
+      output.textContent = '';
+      await testKPI();
+      log('\n---\n');
+      await testRanking();
+      log('\n---\n');
+      await testEvents();
+    }
+  </script>
+</body>
+</html>
