@@ -36,25 +36,30 @@ export default async function handler(req: any, res: any) {
 
       if (error) throw error;
 
-      const components = data?.map(comp => ({
-        id: comp.id,
-        name: comp.name,
-        description: comp.description,
-        icon: comp.category === 'navigation' ? '🧭' : 
+      const components = data?.map(comp => {
+        const isValidUrl = comp.image_url && comp.image_url.startsWith('http');
+        const icon = comp.category === 'navigation' ? '🧭' : 
               comp.category === 'translation' ? '🌐' :
               comp.category === 'health' ? '❤️' :
               comp.category === 'entertainment' ? '🎮' :
-              comp.category === 'productivity' ? '📝' : '📱',
-        color: '#007AFF',
-        author: comp.author?.username || 'Unknown',
-        version: comp.version || '1.0.0',
-        downloads: comp.download_count || 0,
-        rating: 4.5,
-        size: '2MB',
-        category: comp.category,
-        image_url: comp.image_url,
-        file_url: comp.file_url
-      })) || [];
+              comp.category === 'productivity' ? '📝' : '📱';
+        
+        return {
+          id: comp.id,
+          name: comp.name,
+          description: comp.description,
+          icon: isValidUrl ? comp.image_url : icon,
+          color: '#007AFF',
+          author: comp.author?.username || 'Unknown',
+          version: comp.version || '1.0.0',
+          downloads: comp.download_count || 0,
+          rating: 4.5,
+          size: '2MB',
+          category: comp.category,
+          image_url: isValidUrl ? comp.image_url : null,
+          file_url: comp.file_url
+        };
+      }) || [];
 
       return res.status(200).json({ components });
     }
