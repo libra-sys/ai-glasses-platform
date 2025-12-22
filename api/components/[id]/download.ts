@@ -29,6 +29,18 @@ export default async function handler(req: any, res: any) {
         return res.status(404).json({ error: 'Component not found' });
       }
 
+      let code = '';
+      if (data.file_url) {
+        try {
+          const fileResponse = await fetch(data.file_url);
+          if (fileResponse.ok) {
+            code = await fileResponse.text();
+          }
+        } catch (err) {
+          console.error('Fetch file error:', err);
+        }
+      }
+
       await supabase.rpc('increment_download_count', { component_id: id });
 
       return res.status(200).json({
@@ -41,7 +53,7 @@ export default async function handler(req: any, res: any) {
           image_url: data.image_url,
           file_url: data.file_url
         },
-        code: data.file_url || ''
+        code
       });
     }
 

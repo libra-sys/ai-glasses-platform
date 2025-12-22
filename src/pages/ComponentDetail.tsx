@@ -84,8 +84,13 @@ export default function ComponentDetail() {
     }
 
     try {
-      const response = await fetch(component.file_url);
-      const blob = await response.blob();
+      const response = await fetch(`/api/components/${id}/download`);
+      if (!response.ok) throw new Error('下载失败');
+      
+      const data = await response.json();
+      const fileContent = data.code || '';
+      
+      const blob = new Blob([fileContent], { type: 'text/plain' });
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -95,10 +100,10 @@ export default function ComponentDetail() {
       window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
       
-      await componentsApi.incrementDownloadCount(id!);
       toast.success('下载成功');
       loadComponent();
     } catch (error: any) {
+      console.error('Download error:', error);
       toast.error('下载失败');
     }
   };
