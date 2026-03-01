@@ -1,5 +1,5 @@
 const ALIYUN_CONFIG = {
-  apiKey: 'sk-e8449026027e4526b12ab3d19ae7b8db',
+  apiKey: process.env.ALIYUN_API_KEY || 'your_aliyun_api_key',
   apiUrl: 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis'
 };
 

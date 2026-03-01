@@ -3,9 +3,9 @@ import * as crypto from 'crypto';
 import WebSocket from 'ws';
 
 const SPARK_CONFIG = {
-  appId: '6595110b',
-  apiSecret: 'YzAyMDZjYmNkNjZiNTBhNTc3OWE0M2Ew',
-  apiKey: '3973edddd07ca05aab5b96c64cd20a52',
+  appId: process.env.SPARK_APP_ID || 'your_spark_app_id',
+  apiSecret: process.env.SPARK_API_SECRET || 'your_spark_api_secret',
+  apiKey: process.env.SPARK_API_KEY || 'your_spark_api_key',
   wsUrl: 'wss://spark-api.xf-yun.com/chat/max-32k'
 };
 

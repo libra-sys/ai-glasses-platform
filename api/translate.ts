@@ -1,5 +1,5 @@
 const ALIYUN_CONFIG = {
-  apiKey: 'sk-2ca3ccbc4c7944748f46bae80a33fa5b',
+  apiKey: process.env.ALIYUN_API_KEY || 'your_aliyun_api_key',
   apiUrl: 'https://dashscope.aliyuncs.com/api/v1/services/aigc/translation/translation'
 };
 

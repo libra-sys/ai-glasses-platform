@@ -1,8 +1,8 @@
 // 讯飞星火 API 配置
 const SPARK_CONFIG = {
-  appId: '6595110b',
-  apiSecret: 'YzAyMDZjYmNkNjZiNTBhNTc3OWE0M2Ew',
-  apiKey: '3973edddd07ca05aab5b96c64cd20a52',
+  appId: import.meta.env.VITE_SPARK_APP_ID || 'your_spark_app_id',
+  apiSecret: import.meta.env.VITE_SPARK_API_SECRET || 'your_spark_api_secret',
+  apiKey: import.meta.env.VITE_SPARK_API_KEY || 'your_spark_api_key',
   wsUrl: 'wss://spark-api.xf-yun.com/v1.1/chat',
   ttiUrl: 'https://spark-api.cn-huabei-1.xf-yun.com/v2.1/tti'
 };
