@@ -5,6 +5,7 @@ import { AuthProvider } from '@/components/auth/AuthProvider';
 import { RequireAuth } from '@/components/auth/RequireAuth';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
+import SpeedInsights from '@/components/common/SpeedInsights';
 import routes from './routes';
 
 function ScrollToTop() {
@@ -21,6 +22,7 @@ function App() {
   return (
     <Router>
       <AuthProvider>
+        <SpeedInsights />
         <ScrollToTop />
         <Toaster position="top-center" richColors />
         <RequireAuth whiteList={['/', '/components', '/components/:id', '/ai-tools', '/login']}>
